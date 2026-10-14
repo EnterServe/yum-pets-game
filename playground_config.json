@@ -1,0 +1,86 @@
+{
+  "schema": [
+    {
+      "name": "targetHappiness",
+      "type": "number",
+      "label": "Target Happiness",
+      "default": 1500,
+      "min": 500,
+      "max": 3000,
+      "step": 100
+    },
+    {
+      "name": "startingMoves",
+      "type": "number",
+      "label": "Starting Moves",
+      "default": 25,
+      "min": 10,
+      "max": 50,
+      "step": 1
+    },
+    {
+      "name": "pointsPerMatchPiece",
+      "type": "number",
+      "label": "Points Per Matched Piece",
+      "default": 20,
+      "min": 10,
+      "max": 50,
+      "step": 5
+    },
+    {
+      "name": "superMatchBonus",
+      "type": "number",
+      "label": "Super Match Bonus",
+      "default": 80,
+      "min": 20,
+      "max": 200,
+      "step": 10
+    },
+    {
+      "name": "petHappinessGain",
+      "type": "number",
+      "label": "Petting Happiness Gain",
+      "default": 5,
+      "min": 1,
+      "max": 20,
+      "step": 1
+    },
+    {
+      "name": "bunnySpeed",
+      "type": "number",
+      "label": "Bunny Walk Speed",
+      "default": 180,
+      "min": 100,
+      "max": 300,
+      "step": 10
+    },
+    {
+      "name": "spicyMultiplier",
+      "type": "number",
+      "label": "Spicy Turbo Multiplier",
+      "default": 2.5,
+      "min": 1.5,
+      "max": 4.0,
+      "step": 0.5
+    },
+    {
+      "name": "freezeDuration",
+      "type": "number",
+      "label": "Frozen Duration (sec)",
+      "default": 3.0,
+      "min": 1.0,
+      "max": 6.0,
+      "step": 0.5
+    }
+  ],
+  "values": {
+    "targetHappiness": 1500,
+    "startingMoves": 25,
+    "pointsPerMatchPiece": 20,
+    "superMatchBonus": 80,
+    "petHappinessGain": 5,
+    "bunnySpeed": 180,
+    "spicyMultiplier": 2.5,
+    "freezeDuration": 3.0
+  }
+}

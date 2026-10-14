@@ -1,0 +1,102 @@
+{
+  "title": "Yum Pets: Match & Feed",
+  "hook": "Match treats feed happy bunny",
+  "game_overview": "Dynamic match-3 pet sanctuary puzzle game with infinite cycling biomes, pet-linked board treats, and algorithmic obstacle scaling.",
+  "artstyle": "cartoon",
+  "genre": "puzzle",
+  "winning_condition": "Reach target happiness before moves run out to earn stars and advance.",
+  "losing_condition": "Run out of moves without streak-saving; losing all stars demotes 1 level.",
+  "player_mode": "single_player",
+  "supported_orientations": [
+    "portrait",
+    "tall",
+    "any"
+  ],
+  "input_methods": [
+    "touch",
+    "mouse"
+  ],
+  "score_options": {
+    "score_type": "points",
+    "score_order": "higher_is_better"
+  },
+  "low_end_device_support": true,
+  "mobile_playable": true,
+  "tv_playable": false,
+  "language": [
+    "en"
+  ],
+  "content_descriptors": [],
+  "controls": [
+    {
+      "input": "Click / Touch Drag Adjacent Tiles",
+      "action": "Swap two adjacent treat tiles on the 5x5 puzzle grid to create matches of 3 or more."
+    },
+    {
+      "input": "Tap / Click Habitat Island",
+      "action": "Directly interact with the chubby bunny or pet it for bonus tactile feedback."
+    }
+  ],
+  "sections": [
+    {
+      "title": "Design Pillars",
+      "content": "1. Tactile Slapstick Comedy: Pet reactions to different treats are exaggerated, playful, and bouncily animated. 2. Dual-Zone Dynamic Feedback: Every puzzle match immediately generates tangible physical items dropping into the top world. 3. Cozy Approachability: Gentle vibrant colors, rounded shapes, and clear visual cues invite quick casual sessions.",
+      "summary": "Core principles driving charm and engaging match-3 gameplay."
+    },
+    {
+      "title": "Core Loop",
+      "content": "The player surveys the bottom 5x5 puzzle grid and swaps adjacent treat tiles (Berries, Hot Peppers, Ice Cubes, Balloons). Matching 3+ identical tiles spawns the corresponding treat item in the upper habitat island with 2D physics. The chubby bunny detects the treat, runs over, consumes it, and triggers a slapstick effect (Berry = Happy Dance, Pepper = Fiery Zoom Rush with smoke, Ice = Funny Frozen Ice Sculpture, Balloon = Floating Flight). Happiness points accumulate toward the 1,500 target while remaining moves tick down.",
+      "summary": "Primary cycle connecting the puzzle grid with habitat interactions."
+    },
+    {
+      "title": "Core Mechanics",
+      "content": "1. 5x5 Match-3 Engine: Standard orthogonal swaps with gravity cascades and refills. 4-in-a-row or 5-in-a-row matches produce super-treats that grant bonus score. 2. Island Physics Habitat: The top viewport features rigid ground, boundaries, bouncing treat drops, and animated particle effects. 3. Four Elemental Reactions: Berries trigger a cheerful hop-and-wiggle dance; Hot Peppers tint the bunny crimson and send it rocketing around the habitat leaving smoke trails; Ice Cubes turn into ice cream that freezes the bunny into an ice block for 3 seconds; Balloons attach to the bunny's paws lifting it gently to the sky before descending with parachute physics.",
+      "summary": "Detailed mechanics for puzzle matching and pet behavior states."
+    },
+    {
+      "title": "Movement & Scrolling Alignment",
+      "content": "Scrolling Axis: Static single-screen vertical split (Top 50% Island Habitat, Bottom 50% 5x5 Match-3 Grid). Asset Orientation: Habitat entities face sideways towards horizontal movement trajectories with flip-rigid scaling. Movement Physics: Slapstick spring-damper bouncy acceleration, high restitution, and ground friction. Camera Behavior: Locked static dual-viewport camera framing both zones with clear demarcation.",
+      "summary": "Fixed split-screen viewport with lateral physics movement."
+    },
+    {
+      "title": "Visual Hierarchy & Layering",
+      "content": "Layer Separation: Upper habitat features soft pastel sky and floating grassy meadow. Bottom puzzle board uses high-contrast warm wooden/candy borders and vibrant, easily distinguishable treat icons. Obstacle/Treat Affordance: Each of the four treat types has a distinct primary hue and silhouette (Ruby Red Berry, Fiery Crimson Pepper, Cyan Glacial Ice Cube, Golden Yellow/Pink Balloon). HUD Overlay: Happiness meter, move counter, and combo popups sit cleanly along the middle division and screen top.",
+      "summary": "Clear distinction between habitat simulation and puzzle board."
+    },
+    {
+      "title": "Characters & Enemies",
+      "content": "Chubby Bunny ('Pip'): A spherical, ultra-squishy cartoon bunny with floppy ears, expressive cartoon eyes, and dynamic visual states (Standard, Cheerful, Spicy Turbo, Frozen Sculpture, Floating).",
+      "summary": "The main lovable pet character."
+    },
+    {
+      "title": "Fairness Tools",
+      "content": "Automatic hint shaking if no move is made for 5 seconds; guaranteed reshuffle if no valid matches remain on the 5x5 board; clear move counter indicator.",
+      "summary": "Player assistance and hint systems."
+    },
+    {
+      "title": "Juice & Game Feel",
+      "content": "Anticipation Juice: Treat tiles squash and stretch on drag and hover. State Change Juice: Comic smoke puffs for pepper speed boost, frosty mist for frozen pet, confetti on 4+ combos. Impact Juice: Screen bounce on treat island landing, celebratory sound effects, and floating floating point numbers.",
+      "summary": "Satisfying feedback across both screen zones."
+    },
+    {
+      "title": "Social Mechanics & Audience",
+      "content": "Designed for casual puzzle players, pet simulator enthusiasts, and all-age audiences who appreciate cute aesthetic comedy.",
+      "summary": "Target demographics and appeal."
+    },
+    {
+      "title": "Accessibility",
+      "content": "High-contrast treat icons with unique shape silhouettes for colorblind accessibility, intuitive one-touch/swipe controls, and adjustable audio volume.",
+      "summary": "Inclusive design features."
+    },
+    {
+      "title": "Structural Integrity",
+      "content": "Title Splash Screen -> Main Game View (Split Habitat / Match-3) -> Victory Modal (with confetti & star rating) / Out of Moves Modal (with quick retry).",
+      "summary": "Application states and screens."
+    },
+    {
+      "title": "Virtual Touch Controls Implementation",
+      "content": "The match-3 grid utilizes direct touch drag and tap detection with onPointerDown, onPointerMove, and onPointerUp listeners with touch-none CSS styling. Absolute buttons for pause and restart apply pointer-events-auto strictly on button elements.",
+      "summary": "Responsive touch handling on mobile viewports."
+    }
+  ]
+}
